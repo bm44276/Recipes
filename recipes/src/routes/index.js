@@ -4,7 +4,7 @@ import HomePage from '../views/HomePage';
 import Map from '../views/Map';
 import RecipeDetails from '../views/RecipeDetails';
 import SearchResults from '../views/SearchResults'
-
+import AboutUs from '../views/AboutUs'
 Vue.use(Router);
 
 let router = new Router({
@@ -35,6 +35,11 @@ let router = new Router({
             path: '/SearchResults',
             name: 'SearchResults',
             component: SearchResults
+        },
+        {
+            path: '/AboutUs',
+            name: 'AboutUs',
+            component: AboutUs
         }
 
 ]

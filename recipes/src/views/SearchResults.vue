@@ -2,13 +2,34 @@
   <div>
      <HomeNavigation></HomeNavigation>
 
+      <div class="container">
+        <div style="margin-top:50px"></div>
+        <div class="d-flex justify-content-center">
+             
+                <h1 class="text">Results: </h1>
+               
+                <img src="../assets/menu.png" alt="" width="50px" height="50px">
+               
+  
+            </div>
+     
+
       <ul v-for="item in recipes.results" :key="item.id">
-            <li>{{item.title}}
-                <img :src="item.image" alt="">
-                <a v-bind:href="'/RecipeDetails?RecipeId='+item.id">Details</a><br>
+            <li>
+                <div class="d-flex">
+                  <a v-bind:href="'/RecipeDetails?RecipeId='+item.id"> <img :src="item.image" alt="" width="100px" height="100px" class="resultImg"></a>
+                   
+                    <div class="rowSpace"></div>
+                    <div>
+                        <h3 class="text"><a v-bind:href="'/RecipeDetails?RecipeId='+item.id">{{item.title}}</a></h3>
+                        <small class="text">food description a bit</small>
+                    </div>
+                   
+                </div>
             </li>
-           
-        </ul>
+      </ul>
+ </div>
+
 
   </div>
 </template>
@@ -22,6 +43,7 @@ export default {
         },
           data() {
             return {
+            
                //data that is used in the components
                recipes:[]
             }
@@ -35,10 +57,10 @@ export default {
     console.log(search);
     
           
-     this.$http.get("https://api.spoonacular.com/recipes/complexSearch?apiKey=e0c6235e9e9448a9acc247fb4264294b&query="+search+"&number=10").then(response => {
+    /* this.$http.get("https://api.spoonacular.com/recipes/complexSearch?apiKey=e0c6235e9e9448a9acc247fb4264294b&query="+search+"&number=10").then(response => {
                 this.recipes = response.data;
                 console.log(response.data);
-      });      
+      });*/      
 
   }
 }
@@ -46,13 +68,31 @@ export default {
 </script>
 
 <style>
-  .row{
-    display: flex;
+ .resultImg {
+    border-radius: 50%;
+    margin-right: 50px;
   }
 
-  .col{
-    display: felx;
-    flex-direction: column;
-  }
+ul li{
+    list-style-type: none;
+    text-decoration: none;
+    padding: 5px;
+    margin: 4px;
+    border-bottom: double ;
+    border-color: rgb(175, 175, 175);
+}
+
+.text{
+    color: white;
+}
+
+.rowSpace{
+    margin-right:20px;
+}
+
+.spaceDiv{
+    margin-top: 100px;
+}
+
 </style>
 
