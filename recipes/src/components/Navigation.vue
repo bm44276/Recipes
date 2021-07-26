@@ -1,8 +1,8 @@
 <template>
-    <div>
-      <nav class="navbar navbar-light bg-light justify-content-between">
+    <div class="header">
+      <nav class="navbar justify-content-between">
 
-      <a class="navbar-brand" href="/index">Home</a>
+      <a class="navbar-brand text-white" href="/index">Home</a>
       <form class="form-inline">
       
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" v-model="searchInput">
@@ -31,5 +31,8 @@
 
 <style scoped>
 
-
+nav{
+  background-color: #6F495B !important;
+  color: white !important;
+}
 </style>
