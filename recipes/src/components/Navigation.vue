@@ -1,8 +1,9 @@
 <template>
     <div class="header">
-      <nav class="navbar justify-content-between">
+      <nav class="navbar">
 
       <a class="navbar-brand text-white" href="/index">Home</a>
+       <a class="nav-link text-white" href="/Map">Map</a>
       <form class="form-inline">
       
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" v-model="searchInput">
