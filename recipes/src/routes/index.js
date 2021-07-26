@@ -5,6 +5,7 @@ import Map from '../views/Map';
 import RecipeDetails from '../views/RecipeDetails';
 import SearchResults from '../views/SearchResults'
 import AboutUs from '../views/AboutUs'
+import ContactUs from '../views/ContactUs';
 Vue.use(Router);
 
 let router = new Router({
@@ -40,6 +41,11 @@ let router = new Router({
             path: '/AboutUs',
             name: 'AboutUs',
             component: AboutUs
+        },
+        {
+            path: '/ContactUs',
+            name: 'ContactUs',
+            component: ContactUs 
         }
 
 ]
