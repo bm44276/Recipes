@@ -22,7 +22,7 @@
                     <div class="rowSpace"></div>
                     <div>
                         <h3 class="text"><a v-bind:href="'/RecipeDetails?RecipeId='+item.id">{{item.title}}</a></h3>
-                        <small class="text">food description a bit</small>
+                       
                     </div>
                    
                 </div>
@@ -57,10 +57,10 @@ export default {
     console.log(search);
     
           
-    /* this.$http.get("https://api.spoonacular.com/recipes/complexSearch?apiKey=e0c6235e9e9448a9acc247fb4264294b&query="+search+"&number=10").then(response => {
+     this.$http.get("https://api.spoonacular.com/recipes/complexSearch?apiKey=e0c6235e9e9448a9acc247fb4264294b&query="+search+"&number=10").then(response => {
                 this.recipes = response.data;
                 console.log(response.data);
-      });*/      
+      });      
 
   }
 }
