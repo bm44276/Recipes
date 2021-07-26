@@ -6,6 +6,7 @@
        <a class="nav-link text-white" href="/Map">Map</a>
           <a class="nav-link text-white" href="/AboutUs">About Us</a>
            <a class="nav-link text-white" href="/ContactUs">Contact Us</a>
+            <a class="nav-link text-white" href="/Testimonials">Testimonials</a>
       <form class="form-inline">
       
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" v-model="searchInput">

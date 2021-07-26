@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import HomePage from '../views/HomePage';
 import Map from '../views/Map';
+import Testimonials from '../views/Testimonials';
 import RecipeDetails from '../views/RecipeDetails';
 import SearchResults from '../views/SearchResults'
 import AboutUs from '../views/AboutUs'
@@ -26,6 +27,11 @@ let router = new Router({
             path: '/Map',
             name: 'Map',
             component: Map
+            },
+         {
+            path: '/Testimonials',
+            name: 'Testimonials',
+            component: Testimonials
             },
         {
             path: '/RecipeDetails',
