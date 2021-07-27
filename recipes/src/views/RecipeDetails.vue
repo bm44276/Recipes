@@ -91,16 +91,18 @@
 
 
 
-
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
-import HomeNavigation from "../components/Navigation.vue"
+import HomeNavigation from "../components/Navigation.vue";
+import Footer from "../components/Footer.vue"
 export default {
 
   components: {
-            HomeNavigation
+            HomeNavigation,
+            Footer
         },
           data() {
             return {
