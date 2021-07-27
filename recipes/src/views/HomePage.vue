@@ -33,6 +33,12 @@
             </li>
            
         </ul>-->
+        <div class="shadow">
+            <video height="500" loop="true" autoplay="autoplay"  id="vid" muted style="text-align: center;">
+            <source type="video/mp4" src="../assets/AppleAndPizzaAnimation.mp4">
+            </video>
+        </div>
+
         <div class="container-fluid mt-5 mb-5">
             <div class="row justify-content-center">
                 <div class="view view-first" v-for="item in recipes.recipes" :key="item.id" >
@@ -319,5 +325,11 @@ h5{
     font-weight: 600;
     color: white;
 }
+
+.shadow {
+     -webkit-box-shadow: 0 8px 6px -6px rgb(255, 255, 255);
+     -moz-box-shadow: 0 8px 6px -6px rgb(255, 255, 255);
+      box-shadow: 0 8px 6px -6px rgb(255, 255, 255);
+  }
 </style>
 

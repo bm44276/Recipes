@@ -3,7 +3,8 @@
 
         <HomeNavigation></HomeNavigation>
          <div class="container">
-        <h1 class="aboutUsHeaders text">======About Us======</h1>
+            <div class="spaceDiv"></div>
+        <h1 class="aboutUsHeaders text zoomin"><span>About Us</span></h1>
         <div class="spaceDiv"></div>
         <div class="d-flex justify-content-center">
             <div class="aboutUsDiv aboutUsDivText shadow">
@@ -11,10 +12,10 @@
                        quam officiis dolores animi modi, iusto at eos, voluptate quas. Quia, alias perferendis? Maiores harum nisi unde
                        dignissimos numquam error. Officiis natus delectus aperiam explicabo, ad dignissimos mollitia ratione aut reiciendis,
                        neque nisi sint ullam distinctio perferendis labore numquam dolores. Vero fugit soluta, autem laboriosam delectus 
-                       hic atque in qui officiis! Animi dolore ad explicabo consequuntur a? Qui labore ipsam quibusdam aut unde neque, 
-                       totam magnam, esse repellendus repudiandae reprehenderit culpa vel quasi porro laudantium sunt? Aut hic tempora eaque 
-                       optio debitis facilis.
+                       hic atque in qui officiis! Animi dolore ad explicabo.
                 </p>
+
+              
             </div>
             
             <div class="aboutUsDiv">
@@ -28,7 +29,7 @@
         <div class="spaceDiv"></div>
 
 
-        <h2 class="aboutUsHeaders text">Our Team</h2>
+        <h2 class="aboutUsHeaders text zoomin">Our Team</h2>
 
         <div class="spaceDiv"></div>
       
@@ -38,10 +39,10 @@
                 <div class="flip-card">
                     <div class="flip-card-inner">
                       <div class="flip-card-front">
-                        <img src="burger.jpg" alt="Avatar" style="width:300px;height:300px;">
+                        <img src="../assets/besmir.jpg" alt="Avatar" style="width:300px;height:300px;">
                       </div>
                       <div class="flip-card-back">
-                        <h1>Besmir Miftari</h1>
+                        <h2>Besmir Miftari</h2>
                         <p>Back end developer</p>
                       </div>
                     </div>
@@ -51,10 +52,10 @@
                 <div class="flip-card">
                     <div class="flip-card-inner">
                       <div class="flip-card-front">
-                        <img src="burger.jpg" alt="Avatar" style="width:300px;height:300px;">
+                        <img src="../assets/marigona.jpg" alt="Avatar" style="width:300px;height:300px;">
                       </div>
                       <div class="flip-card-back">
-                        <h1>Marigona Kadriu</h1>
+                        <h2>Marigona Kadriu</h2>
                         <p>Front end developer</p>
                       </div>
                     </div>
@@ -64,10 +65,10 @@
                 <div class="flip-card">
                     <div class="flip-card-inner">
                       <div class="flip-card-front">
-                        <img src="burger.jpg" alt="Avatar" style="width:300px;height:300px;">
+                        <img src="../assets/joni.jpg" alt="Avatar" style="width:300px;height:300px;">
                       </div>
                       <div class="flip-card-back">
-                        <h1>Jon Morina</h1>
+                        <h2>Jon Morina</h2>
                         <p>Full stack developer</p>
                       </div>
                     </div>
@@ -91,6 +92,8 @@
                     ducimus ipsam fuga cupiditate cum vero velit libero aperiam aut a accusamus nulla totam
                      officiis esse.
             </p>
+
+            
         </div>
         
     </div>
@@ -184,4 +187,28 @@ import HomeNavigation from "../components/Navigation.vue"
   .spaceDiv{
       margin-top: 100px;
   }
+
+  h1 {
+   width: 100%; 
+   text-align: center; 
+   border-bottom: 1px solid rgb(250, 250, 250); 
+   line-height: 0.1em;
+   margin: 10px 0 20px; 
+} 
+
+h1 span { 
+    background: #414141; 
+    padding:0 10px; 
+}
+
+.zoomin:hover
+{
+-webkit-transform: scale(1.1);
+-ms-transform: scale(1.1);
+transform: scale(1.1);
+cursor:pointer;
+}
+
+
+
 </style>
