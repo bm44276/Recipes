@@ -144,7 +144,7 @@ import HomeNavigation from "../components/Navigation.vue"
   }
  .form-wrap form{
         color: white;
-        background: #564e68;
+        background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
         position: relative;
         top: 200px;
         overflow: hidden;
@@ -152,7 +152,7 @@ import HomeNavigation from "../components/Navigation.vue"
         width: 400px;
         margin: 0px auto;
         padding: 20px;
-        border: 1px solid #494358;
+        border: 1px solid linear-gradient(rgba(0, 0, 0, 0.76),rgba(0, 0, 0, 0.787));
         border-right: 3px;
         transition: all 1s ease-in-out .3s;
         border-radius: 10px;
@@ -178,7 +178,7 @@ import HomeNavigation from "../components/Navigation.vue"
       padding: 5px;
       border: none;
       margin-top: 10px;
-      border-bottom: 2px solid  rgb(29, 30, 44);
+      border-bottom: 2px solid  white;
       letter-spacing: 1px;
   }
 
@@ -197,11 +197,11 @@ import HomeNavigation from "../components/Navigation.vue"
     position: relative;
     font-family: tahoma;
     font-size: 24px;
-    color: rgb(170, 170, 170);
+    color: rgb(214, 214, 214);
     width: 100%;
     text-align: center;
     opacity: 0;
-    background: rgb(67, 62, 78);
+    background: rgb(0, 0, 0);
     cursor: pointer;
     letter-spacing: 2px;
     border-radius: 3px;
@@ -211,12 +211,12 @@ import HomeNavigation from "../components/Navigation.vue"
       z-index: 1;
       opacity: 1;
       transition: opacity 0.7s ease-in-out 1.3s;
-      border: 1px solid rgb(60, 55, 70);
+      border: 1px solid #000000;
       margin-bottom: 30px;
   }
  .contactUs input[type=submit]:hover{
     color: white;
-    background-color: #53505a;
+    background-color: #000000;
     transition: all 0.3s ease;
   }
   .inputDesign{
@@ -243,7 +243,7 @@ import HomeNavigation from "../components/Navigation.vue"
       color: white;
   }
    .inputDesign textarea:focus{
-       border-bottom: 2px solid  rgb(188, 188, 200);
+       border-bottom: 2px solid  white;
    }
   .inputDesign label{
       position: absolute;
@@ -258,7 +258,7 @@ import HomeNavigation from "../components/Navigation.vue"
       bottom: 0px;
       height: 2px;
       width: 100%;
-      background: rgb(29, 30, 44);
+      background: rgb(204, 204, 204);
   }
   .inputDesign .underline::before{
         content: "";

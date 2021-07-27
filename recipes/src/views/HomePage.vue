@@ -2,29 +2,29 @@
   <div >
       <HomeNavigation></HomeNavigation>
     <div class="wrapper">
-    <div class="row">
-       <div class="col">
-            <h1>Lorem ipsum</h1>
-            <p>Lorem ipsum dolor sit amet dolor sit amet lorem ipsum
-            Lorem ipsum dolor sit amet dolor sit amet lorem ipsum
-            Lorem ipsum dolor sit amet dolor sit amet lorem ipsum0</p>
-            <button>Explore</button>
-        </div>
+        <div class="row">
         <div class="col">
-        <div class="card card1">
-        <h5>Lorem title</h5>
+                <h1>Lorem ipsum</h1>
+                <p>Lorem ipsum dolor sit amet dolor sit amet lorem ipsum
+                Lorem ipsum dolor sit amet dolor sit amet lorem ipsum
+                Lorem ipsum dolor sit amet dolor sit amet lorem ipsum0</p>
+                <button>Explore</button>
+            </div>
+            <div class="col">
+            <div class="card card1">
+            <h5>Lorem title</h5>
+            </div>
+            <div class="card card2">
+            <h5>Lorem title</h5>
+            </div>
+            <div class="card card3">
+            <h5>Lorem title</h5>
+            </div>
+            <div class="card card4">
+            <h5>Lorem title</h5>
+            </div>
+            </div>
         </div>
-        <div class="card card2">
-        <h5>Lorem title</h5>
-        </div>
-        <div class="card card3">
-        <h5>Lorem title</h5>
-        </div>
-        <div class="card card4">
-        <h5>Lorem title</h5>
-        </div>
-        </div>
-    </div>
     </div>
       <!--  <ul v-for="item in recipes.recipes" :key="item.id">
             <li>{{item.title}}
@@ -33,13 +33,22 @@
             </li>
            
         </ul>-->
-        <div class="view view-first" v-for="item in recipes.recipes" :key="item.id">  
-      <img :src="item.image" alt=""> 
-     <div class="mask">  
-     <h2>{{item.title}}</h2>  
-            <a v-bind:href="'/RecipeDetails?RecipeId='+item.id">Details</a>
-     </div>  
-</div>  
+        <div class="container-fluid mt-5 mb-5">
+            <div class="row justify-content-center">
+                <div class="view view-first" v-for="item in recipes.recipes" :key="item.id" >
+                    <div class="center">
+                        <img :src="item.image" alt=""> 
+                        <div class="mask">  
+                            <div>
+                                <h2>{{item.title}}</h2>  
+                            <a v-bind:href="'/RecipeDetails?RecipeId='+item.id">Details</a>
+                            </div>
+                            
+                        </div>     
+                    </div>        
+                </div>  
+            </div>
+        </div>
   </div>
 </template>
 
@@ -62,7 +71,7 @@ export default {
                 console.log(response.data);
             });
               
-            this.$http.get("https://api.spoonacular.com/recipes/random?apiKey=43f565ab010744c48b2fdd02bf4d4988&&number=10").then(response => {
+            this.$http.get("https://api.spoonacular.com/recipes/random?apiKey=43f565ab010744c48b2fdd02bf4d4988&&number=12").then(response => {
                 this.recipes = response.data;
                 console.log(response.data);
             });
@@ -155,11 +164,9 @@ h5{
 
 
 .view {
-    width: 300px;
-    height: 200px;
+    width: 400px;
+    height: 300px;
     margin: 10px;
-    float: left;
-    border: 10px solid #fff;
     overflow: hidden;
     position: relative;
     text-align: center;
@@ -167,12 +174,15 @@ h5{
     cursor: default;
 }
 .view .mask, .view .content {
-    width: 300px;
-    height: 200px;
+    width: 400px;
+    height: 300px;
     position: absolute;
     overflow: hidden;
     top: 0;
-    left: 0
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .view img {
     display: block;
@@ -186,7 +196,6 @@ h5{
     font-size: 17px;
     padding: 10px;
     background: rgba(0, 0, 0, 0.8);
-    margin: 20px 0 0 0
 }
 .view p {
     font-family: Georgia, serif;
@@ -194,7 +203,8 @@ h5{
     font-size: 12px;
     position: relative;
     color: #fff;
-    padding: 10px 20px 20px;
+    padding: 20px 0;
+    margin: 20px 0;
     text-align: center
 }
 .view a.info {
@@ -204,7 +214,8 @@ h5{
     background: #000;
     color: #fff;
     text-transform: uppercase;
-    box-shadow: 0 0 1px #000
+    box-shadow: 0 0 1px #000;
+    margin: 40px 0;
 }
 .view a.info:hover {
     box-shadow: 0 0 5px #000
@@ -232,6 +243,7 @@ h5{
     opacity: 0;
     transform: scale(0);
     transition: all 0.5s linear;
+    margin: 40px 0;
 }
 .view-first a.info { 
     opacity: 0;
@@ -248,11 +260,11 @@ h5{
     opacity: 0;
 }	
 .view-first h2{
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid #525252;
     background: transparent;
     margin: 20px 40px 0px 40px;
     transform: scale(0);
-    color: #333;
+    color: rgb(32, 32, 32);
     transition: all 0.5s linear;
     opacity: 0;
 }
@@ -266,11 +278,22 @@ h5{
     opacity: 0;
     transform: scale(0);
     transition: all 0.5s linear;
+    margin: 20px 0;
+}
+.mask a{
+    background: #414141;
+    border: 2px #444444 solid;
+    color: white;
+    text-decoration: none;
+    margin: 20px 20px;
+    padding: 10px;
+    box-shadow: 4px 4px 7px #444444;
+    transition: all 0.2s linear;
 }
 
 .view-first:hover img { 
 	transform: scale(10);
-    opacity: 0.7;
+    opacity: 0.5;
 }
 .view-first:hover .mask { 
 	opacity: 1;
@@ -281,5 +304,20 @@ h5{
     transform: scale(1);
     opacity: 1;
 }
-
+.mask a, .mask h2{
+    margin: 20px 0 !important;
+}
+.mask a:hover{
+    background-color: #525252;
+    border: 1px solid #525252;
+    letter-spacing: 1px;
+}
+.mask h2{
+    width: 90% !important;
+    margin: 20px auto !important;
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+}
 </style>
+
