@@ -89,16 +89,7 @@
                    sint modi perspiciatis eligendi ad minus facilis vel culpa ullam repellat? Laudantium
                     illo ipsum aliquid eum blanditiis dolor iusto nisi itaque atque dicta accusantium, 
                     ducimus ipsam fuga cupiditate cum vero velit libero aperiam aut a accusamus nulla totam
-                     officiis esse. Dignissimos rerum facere sint asperiores, eligendi omnis dicta a quia.
-                      Libero, ipsam explicabo accusamus consectetur saepe, amet tempore sapiente fugit nisi
-                       exercitationem eligendi sed quisquam ipsum porro nostrum omnis enim dolores quam deserunt
-                        officiis voluptate provident maxime, deleniti laudantium! Corporis aspernatur aut libero,
-                         nisi qui temporibus, reprehenderit soluta, doloribus dolor vero ut perferendis. Repellat
-                          cum ut nulla, reiciendis dolore reprehenderit modi eaque eos dolorum nam vitae tempora 
-                          sapiente, alias iure rerum corrupti voluptate! Deleniti ullam, ex quasi delectus molestiae
-                           at neque quo quaerat. Cum maiores eveniet inventore nulla necessitatibus atque expedita
-                            nesciunt amet, doloremque tenetur autem quam ipsam eius eum. Cumque voluptate illo nobis
-                             minima inventore aliquam, sit tempore, sed modi ipsum natus ut iure?
+                     officiis esse.
             </p>
         </div>
         

@@ -2,8 +2,9 @@
   <div id="app">
     <router-view></router-view>
   </div>
+ 
 </template>
-
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
 <script>
 
 

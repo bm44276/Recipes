@@ -2,7 +2,7 @@
   <div>
      <HomeNavigation></HomeNavigation>
 
-   <!-- <div class="col">
+   <!--<div class="col">
       <div><h1>{{recipe.title}}</h1></div>
       <div>
           <img v-bind:src="recipe.image" alt="">
@@ -114,10 +114,10 @@ export default {
     console.log(recipeId);
     
           
-     this.$http.get("https://api.spoonacular.com/recipes/"+recipeId+"/information?apiKey=e0c6235e9e9448a9acc247fb4264294b&includeNutrition=false").then(response => {
+    this.$http.get("https://api.spoonacular.com/recipes/"+recipeId+"/information?apiKey=e0c6235e9e9448a9acc247fb4264294b&includeNutrition=false").then(response => {
                 this.recipe = response.data;
                 console.log(response.data);
-      });      
+      });   
 
   }
 }

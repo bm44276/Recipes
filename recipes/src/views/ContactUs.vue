@@ -11,9 +11,15 @@
             <div class="form-wrap">
                 <form>
                     <p>Hello John Doe,</p>
-                    <label for="email">Your Message:</label>
-                    <textarea name="message" id="message" value="Your Message"></textarea>
+                    <div class="inputDesign">
+                        <textarea name="message" id="message" value="Your Message"></textarea>
+
+                        <label for="email">Your Message:</label>
+                    </div>
+                
+                    <br><br>
                     <p>Best,</p>
+                    <br>
                     <div class="inputDesign"> 
                         <input type="text" name="name" id="email">
                        <div class="underline">
@@ -27,16 +33,20 @@
                 </form>
             </div>
         </div>
+
+
+       
     </div>
 </template>
-
 <script>
+
 import HomeNavigation from "../components/Navigation.vue"
     export default {
       components: {
             HomeNavigation
-        }
+        },
     }
+
 </script>
 
 <style>
@@ -87,7 +97,7 @@ import HomeNavigation from "../components/Navigation.vue"
          animation: animate 2s linear;
          z-index: 2;
          position: relative;
-         text-shadow: 5px 12px 4px rgb(0, 0, 0);
+         text-shadow: 4px 12px 4px rgb(0, 0, 0);
      }
 
    @keyframes animate {
@@ -158,15 +168,18 @@ import HomeNavigation from "../components/Navigation.vue"
   }
  .form-wrap textarea{
       font: 14px normal uppercase, arial, serif;
-      color: black;
-      background: rgb(255, 255, 255);
+      color: white;
+      background: none;
       width:350px;
       height: 37px;
       padding: 0px 10px;
       margin: 0 0 10px 0;
       border: 1px solid #f8f5f1;
-      border-radius: 5px;
       padding: 5px;
+      border: none;
+      margin-top: 10px;
+      border-bottom: 2px solid  rgb(29, 30, 44);
+      letter-spacing: 1px;
   }
 
  .form-wrap textarea{
@@ -203,6 +216,8 @@ import HomeNavigation from "../components/Navigation.vue"
   }
  .contactUs input[type=submit]:hover{
     color: white;
+    background-color: #53505a;
+    transition: all 0.3s ease;
   }
   .inputDesign{
         position: relative;
@@ -217,12 +232,19 @@ import HomeNavigation from "../components/Navigation.vue"
       font-size: 17px;
       border-bottom: 2px solid silver;
       background: none;
+      color: white;
+      letter-spacing: 1px;
   }
-  .inputDesign input:focus ~ label{
+
+  
+  .inputDesign input:focus ~ label, .inputDesign textarea:focus ~ label{
       transform: translateY(-20px);
       font-size: 16px;
       color: white;
   }
+   .inputDesign textarea:focus{
+       border-bottom: 2px solid  rgb(188, 188, 200);
+   }
   .inputDesign label{
       position: absolute;
       bottom: 0px;

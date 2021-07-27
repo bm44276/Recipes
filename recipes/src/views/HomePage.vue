@@ -1,16 +1,6 @@
 <template>
   <div >
       <HomeNavigation></HomeNavigation>
- 
-
-       <!--<ul v-for="item in recipes.recipes" :key="item.id">
-            <li>{{item.title}}
-                <img :src="item.image" alt="">
-                <a v-bind:href="'/RecipeDetails?RecipeId='+item.id">Details</a><br>
-            </li>
-           
-        </ul>
--->
     <div class="wrapper">
     <div class="row">
        <div class="col">
@@ -36,7 +26,20 @@
         </div>
     </div>
     </div>
-     
+      <!--  <ul v-for="item in recipes.recipes" :key="item.id">
+            <li>{{item.title}}
+                <img :src="item.image" alt="">
+                <a v-bind:href="'/RecipeDetails?RecipeId='+item.id">Details</a><br>
+            </li>
+           
+        </ul>-->
+        <div class="view view-first" v-for="item in recipes.recipes" :key="item.id">  
+      <img :src="item.image" alt=""> 
+     <div class="mask">  
+     <h2>{{item.title}}</h2>  
+            <a v-bind:href="'/RecipeDetails?RecipeId='+item.id">Details</a>
+     </div>  
+</div>  
   </div>
 </template>
 
@@ -49,20 +52,20 @@ export default {
           data() {
             return {
                //data that is used in the components
-               //recipes:''
+              recipes:''
             }
         },
            mounted: function () {
             
-            /*this.$http.get("https://api.spoonacular.com/recipes/complexSearch?apiKey=e0c6235e9e9448a9acc247fb4264294b&query=&number=20").then(response => {
+           this.$http.get("https://api.spoonacular.com/recipes/complexSearch?apiKey=e0c6235e9e9448a9acc247fb4264294b&query=&number=20").then(response => {
                 this.recipes = response.data;
                 console.log(response.data);
-            });*/
+            });
               
-            /*this.$http.get("https://api.spoonacular.com/recipes/random?apiKey=e0c6235e9e9448a9acc247fb4264294b&&number=10").then(response => {
+            this.$http.get("https://api.spoonacular.com/recipes/random?apiKey=e0c6235e9e9448a9acc247fb4264294b&&number=10").then(response => {
                 this.recipes = response.data;
                 console.log(response.data);
-            });*/
+            });
 
             
 
@@ -113,6 +116,7 @@ button{
 }
 button:hover{
     background-color:#141414;
+    
     color:#fff;
     transition: ease 0.5s ;
 }
@@ -148,4 +152,134 @@ h5{
     text-shadow: 0 0 5px #999;
     font-weight:600
 }
+
+
+.view {
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+    float: left;
+    border: 10px solid #fff;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    box-shadow: 1px 1px 2px #e6e6e6;
+    cursor: default;
+}
+.view .mask, .view .content {
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0
+}
+.view img {
+    display: block;
+    position: relative
+}
+.view h2 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 17px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    margin: 20px 0 0 0
+}
+.view p {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 12px;
+    position: relative;
+    color: #fff;
+    padding: 10px 20px 20px;
+    text-align: center
+}
+.view a.info {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    box-shadow: 0 0 1px #000
+}
+.view a.info:hover {
+    box-shadow: 0 0 5px #000
+}
+.view-first img { 
+	transform: scaleY(1);
+	transition: all 0.7s ease-in-out;
+}
+.view-first .mask { 
+    background-color: rgba(255, 231, 179, 0.3); 
+    transition: all 0.5s linear;
+    opacity: 0;
+}	
+.view-first h2{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    background: transparent;
+    margin: 20px 40px 0px 40px;
+    transform: scale(0);
+    color: #333;
+    transition: all 0.5s linear;
+    opacity: 0;
+}
+.view-first p {
+    color: #333;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.5s linear;
+}
+.view-first a.info { 
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.5s linear;
+}
+.view-first img { 
+	transform: scaleY(1);
+	transition: all 0.7s ease-in-out;
+}
+.view-first .mask { 
+    background:rgba(255, 255, 255, 0.219) ;
+    transition: all 0.5s linear;
+    opacity: 0;
+}	
+.view-first h2{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    background: transparent;
+    margin: 20px 40px 0px 40px;
+    transform: scale(0);
+    color: #333;
+    transition: all 0.5s linear;
+    opacity: 0;
+}
+.view-first p {
+    color: #333;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.5s linear;
+}
+.view-first a.info { 
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.5s linear;
+}
+
+.view-first:hover img { 
+	transform: scale(10);
+    opacity: 0.7;
+}
+.view-first:hover .mask { 
+	opacity: 1;
+}																			 
+.view-first:hover h2,
+.view-first:hover p,
+.view-first:hover a.info{ 
+    transform: scale(1);
+    opacity: 1;
+}
+
 </style>
