@@ -12,6 +12,8 @@
                
   
             </div>
+
+            <div class="spaceDiv"></div>
      
 
       <ul v-for="item in recipes.results" :key="item.id">
@@ -57,7 +59,7 @@ export default {
     console.log(search);
     
           
-     this.$http.get("https://api.spoonacular.com/recipes/complexSearch?apiKey=e0c6235e9e9448a9acc247fb4264294b&query="+search+"&number=10").then(response => {
+     this.$http.get("https://api.spoonacular.com/recipes/complexSearch?apiKey=43f565ab010744c48b2fdd02bf4d4988&query="+search+"&number=10").then(response => {
                 this.recipes = response.data;
                 console.log(response.data);
       });      
@@ -92,6 +94,16 @@ ul li{
 
 .spaceDiv{
     margin-top: 100px;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
+
+ul li:hover{
+  background-color: rgb(139, 139, 139);
+  border-radius: 100px;
 }
 
 </style>
