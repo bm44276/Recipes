@@ -39,26 +39,38 @@
             
             <div>
                 <h2 class="text-black my-5" style="font-weight:600; font-style:underline">♦ {{recipe.title}}</h2>
-                <p class="text-black">♣ Made for {{recipe.readyInMinutes}} people</p>
-                <p class="text-black">♣ Estimated time {{recipe.readyInMinutes}} minutes</p>
+                <p class="text-black para">♣ Made for {{recipe.readyInMinutes}} people</p>
+                <p class="text-black para">♣ Estimated time {{recipe.readyInMinutes}} minutes</p>
             </div>
         </div>
         
         <div class="spaceDiv"></div>
-        <div>
-            <p class="text" style="text-align: center;">{{recipe.instructions}}</p>
+        <h2 class="" style="font-family: verdana; letter-spacing: 0.2em">Instructions</h2>
+        <div class="container d-flex">
+            <p class="text text1 col-md-8 mx-3 p-3" style="text-align: center; "> {{recipe.instructions}}</p>
+
+            <div class="text text4 col-md-3">
+                <h3>Equipment</h3>
+                 <ul>
+                  <template v-for="item in recipe.analyzedInstructions[0].steps">
+                    <li v-for="equipment in item.equipment" :key="equipment.id">
+                      {{equipment.name}}
+                    </li>
+                  </template>
+                  </ul>
+             </div>
         </div>
 
         <div class="d-flex justify-content-center">
-            <div class="text">
-               <h3>Steps</h3>
+            <div class="text text2 col-md-7 mx-4">
+               <h3 class=" p-3">Steps</h3>
                <ul v-for="item in recipe.analyzedInstructions[0].steps" :key="item.id">
                    <li>{{item.step}}</li>
                </ul>
             </div>
             
-            <div  class="text">
-                <h3>Ingredients</h3>
+            <div  class="text text3 col-md-3">
+                <h3 class="p-3">Ingredients</h3>
 
                   <ul>
                   <template v-for="item in recipe.analyzedInstructions[0].steps">
@@ -70,16 +82,7 @@
 
              </div>
 
-             <div  class="text">
-                <h3>Equipmennt</h3>
-                 <ul>
-                  <template v-for="item in recipe.analyzedInstructions[0].steps">
-                    <li v-for="equipment in item.equipment" :key="equipment.id">
-                      {{equipment.name}}
-                    </li>
-                  </template>
-                  </ul>
-             </div>
+             
 
         </div>
 
@@ -124,8 +127,12 @@ export default {
 
 </script>
 
-<style>
-  
+<style scoped>
+  .para{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+
+  }
 ul li{
     list-style-type: none;
     text-decoration: none;
@@ -135,6 +142,12 @@ ul li{
 
 .text{
     color: black;
+   background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba(20, 20, 26, 0.37);
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 .rowSpace{

@@ -41,9 +41,10 @@
                       <div class="flip-card-front">
                         <img src="../assets/besmir.jpg" alt="Avatar" style="width:300px;height:300px;">
                       </div>
-                      <div class="flip-card-back">
-                        <h2>Besmir Miftari</h2>
-                        <p>Back end developer</p>
+                      <div class="flip-card-back px-2" >
+                        <h2 class="mt-2">Besmir Miftari</h2>
+                        <p>Back-end developer</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias quidem temporibus placeat recusandae blanditiis doloribus?</p>
                       </div>
                     </div>
                   </div>
@@ -54,9 +55,10 @@
                       <div class="flip-card-front">
                         <img src="../assets/marigona.jpg" alt="Avatar" style="width:300px;height:300px;">
                       </div>
-                      <div class="flip-card-back">
-                        <h2>Marigona Kadriu</h2>
-                        <p>Front end developer</p>
+                      <div class="flip-card-back px-2" >
+                        <h2 class="mt-2">Marigona Kadriu</h2>
+                        <p>Front-end developer</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias quidem temporibus placeat recusandae blanditiis doloribus?</p>
                       </div>
                     </div>
                   </div>
@@ -67,9 +69,10 @@
                       <div class="flip-card-front">
                         <img src="../assets/joni.jpg" alt="Avatar" style="width:300px;height:300px;">
                       </div>
-                      <div class="flip-card-back">
-                        <h2>Jon Morina</h2>
+                      <div class="flip-card-back px-2" >
+                        <h2 class="mt-2">Jon Morina</h2>
                         <p>Full stack developer</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias quidem temporibus placeat recusandae blanditiis doloribus?</p>
                       </div>
                     </div>
                   </div>
@@ -81,8 +84,9 @@
         </div>
 
         <div class="spaceDiv"></div>
-
-        <div>
+        <h3 class="text-white" style="letter-spacing:0.2em;">We ensure quality!</h3>
+        <div class="container my-2">
+         
             <p class="aboutUsHeaders text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, alias?
                  Nulla non impedit voluptatibus labore nam sequi possimus mollitia magni 
                  temporibus sunt odio quidem consectetur, recusandae quae minus hic blanditiis ex dolorem
@@ -97,14 +101,17 @@
         </div>
         
     </div>
+    <Footer></Footer>
     </div>
 </template>
 
 <script>
 import HomeNavigation from "../components/Navigation.vue"
+import Footer from "../components/Footer.vue"
     export default {
          components: {
-            HomeNavigation
+            HomeNavigation,
+            Footer
         }
     }
 </script>
@@ -179,9 +186,10 @@ import HomeNavigation from "../components/Navigation.vue"
   
   /* Style the back side */
   .flip-card-back {
-    background-color: #414141;
+    background-image: linear-gradient(to right top, #414141, #48444c, #534754, #604859, #6f495b);
     color: white;
     transform: rotateY(180deg);
+    
   }
 
   .spaceDiv{

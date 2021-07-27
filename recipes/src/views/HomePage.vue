@@ -25,6 +25,7 @@
             </div>
             </div>
         </div>
+        <div class="scroll-down"></div>
     </div>
       <!--  <ul v-for="item in recipes.recipes" :key="item.id">
             <li>{{item.title}}
@@ -33,13 +34,16 @@
             </li>
            
         </ul>-->
-        <div class="shadow">
-            <video height="500" loop="true" autoplay="autoplay"  id="vid" muted style="text-align: center;">
+        
+        <div class="shadow py-3">
+            <video height="500" loop="true" autoplay="autoplay"  id="vid" muted style="text-align: center; border-radius:20px">
             <source type="video/mp4" src="../assets/AppleAndPizzaAnimation.mp4">
+   
             </video>
         </div>
 
         <div class="container-fluid mt-5 mb-5">
+            <h1 class="text-white" style="letter-spacing:0.2em; font-family:verdana; font-size:35px">Our Recipes</h1>
             <div class="row justify-content-center">
                 <div class="view view-first" v-for="item in recipes.recipes" :key="item.id" >
                     <div class="center">
@@ -55,14 +59,17 @@
                 </div>  
             </div>
         </div>
+        <Footer></Footer>
   </div>
 </template>
 
 <script>
 import HomeNavigation from "../components/Navigation.vue"
+import Footer from "../components/Footer.vue"
 export default {
       components: {
-            HomeNavigation
+            HomeNavigation,
+            Footer
         },
           data() {
             return {
@@ -89,6 +96,49 @@ export default {
 </script>
 
 <style scoped>
+body{background-color:#000; overflow:hidden;}
+
+.scroll-down {
+	position: absolute;
+	left: 50%;
+	bottom: 10px;
+	display: block;
+	text-align: center;
+	font-size: 20px;
+	z-index: 100;
+	text-decoration: none;
+	text-shadow: 0;
+  width: 13px;
+  height: 13px;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+  z-index: 9;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%) rotate(45deg);
+  -moz-transform: translate(-50%, 0%) rotate(45deg);
+  transform: translate(-50%, 0%) rotate(45deg);
+	-webkit-animation: fade_move_down 4s ease-in-out infinite;
+	-moz-animation:    fade_move_down 4s ease-in-out infinite;
+	animation:         fade_move_down 4s ease-in-out infinite;
+}
+
+
+/*animated scroll arrow animation*/
+@-webkit-keyframes fade_move_down {
+  0%   { -webkit-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { -webkit-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+}
+@-moz-keyframes fade_move_down {
+  0%   { -moz-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { -moz-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+}
+@keyframes fade_move_down {
+  0%   { transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { transform:translate(0,10px) rotate(45deg); opacity: 0; }
+}
 .wrapper{
     width:100%;
     overflow:hidden;

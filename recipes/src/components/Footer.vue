@@ -9,10 +9,10 @@
                         <div class="col-lg-3 col-md-6">
                             <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
                                 <h3 class="f-title f_600 t_color f_size_18">Get in Touch</h3>
-                                <p>Don’t miss any updates of our new templates and extensions.!</p>
+                                <p>Tell us what you truly desire!</p>
                                 <form action="#" class="f_subscribe_two mailchimp" method="post" novalidate="true" _lpchecked="1">
                                     <input type="text" name="EMAIL" class="form-control memail" placeholder="Email">
-                                    <button class="btn btn_get btn_get_two" type="submit">Subscribe</button>
+                                    <button class="btn btn_get btn_get_two" type="submit">Send</button>
                                     <p class="mchimp-errmessage" style="display: none;"></p>
                                     <p class="mchimp-sucmessage" style="display: none;"></p>
                                 </form>
@@ -20,14 +20,13 @@
                         </div>
                         <div class="col-lg-3 col-md-6">
                             <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
-                                <h3 class="f-title f_600 t_color f_size_18">Download</h3>
+                                <h3 class="f-title f_600 t_color f_size_18">Links</h3>
                                 <ul class="list-unstyled f_list">
-                                    <li><a href="#">Company</a></li>
-                                    <li><a href="#">Android App</a></li>
-                                    <li><a href="#">ios App</a></li>
-                                    <li><a href="#">Desktop</a></li>
-                                    <li><a href="#">Projects</a></li>
-                                    <li><a href="#">My tasks</a></li>
+                                    <li><a href="/index">Home</a></li>
+                                    <li><a href="/AboutUs">About Us</a></li>
+                                    <li><a href="/ContactUs">Contact Us</a></li>
+                                    <li><a href="/Map">Map</a></li>
+                                    <li><a href="/Testimonials">Testimonials</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -49,9 +48,9 @@
                                 <h3 class="f-title f_600 t_color f_size_18">Team Solutions</h3>
                                 <div class="f_social_icon">
                                     <a href="#" class="fab fa-facebook"></a>
-                                    <a href="#" class="fab fa-twitter"></a>
-                                    <a href="#" class="fab fa-linkedin"></a>
-                                    <a href="#" class="fab fa-pinterest"></a>
+                                    <a href="#" class="fab fa-twitter "></a>
+                                    <a href="#" class="fab fa-linkedin "></a>
+                                    <a href="#" class="fab fa-pinterest "></a>
                                 </div>
                             </div>
                         </div>
@@ -79,7 +78,7 @@ body {
 }
 
 .new_footer_area {
-    background: #fbfbfd;
+    background: #6f495b;
 }
 
 
@@ -96,14 +95,14 @@ body {
     font-size: 14px;
     font-weight: 300;
     line-height: 20px;
-    color: #7f88a6;
+    color: #fff;
     padding: 27px 0px;
 }
 .new_footer_top .company_widget p {
     font-size: 16px;
     font-weight: 300;
     line-height: 28px;
-    color: #000;
+    color: #fff;
     margin-bottom: 20px;
 }
 .new_footer_top .company_widget .f_subscribe_two .btn_get {
@@ -111,13 +110,13 @@ body {
     margin-top: 20px;
 }
 .btn_get_two:hover {
-    background: transparent;
-    color: #6f495b;
+    background: #414141;
+    color: #fff;
 }
 .btn_get:hover {
-    color: #fff;
-    background: #6f495b;
-    border-color: #6f495b;
+    color: #000;
+    background: #fff;
+    border-color: #000;
     -webkit-box-shadow: none;
     box-shadow: none;
 }
@@ -129,10 +128,13 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 
 
 .new_footer_top .f_widget.about-widget .f_list li a:hover {
-    color: #6f495b;
+    color: #141414;
+    transition: 0.5s ease;
 }
 .new_footer_top .f_widget.about-widget .f_list li {
     margin-bottom: 11px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    ;color:#f1f1f1
 }
 .f_widget.about-widget .f_list li:last-child {
     margin-bottom: 0px;
@@ -147,7 +149,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
     width: 44px;
     height: 44px;
     line-height: 43px;
-    background: transparent;
+    color: black;
     border: 1px solid #e2e2eb;
     font-size: 24px;
 }
@@ -159,7 +161,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
     line-height: 45px;
     color: #000;
     display: inline-block;
-    background: #ebeef5;
+
     text-align: center;
     -webkit-transition: all 0.2s linear;
     -o-transition: all 0.2s linear;
@@ -181,14 +183,15 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 .btn_get_two {
     -webkit-box-shadow: none;
     box-shadow: none;
-    background: #6f495b;
+    background: #fff;
     border-color: #6f495b;
-    color: #fff;
+    color: #414141;
 }
 
 .btn_get_two:hover {
     background: transparent;
-    color: #6f495b;
+    color: #fff;
+    background-color: #141414
 }
 
 .new_footer_top .f_social_icon a:hover {
@@ -201,7 +204,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 }
 .new_footer_top .f-title {
     margin-bottom: 30px;
-    color: #263b5e;
+    color: #fff;
 }
 .f_600 {
     font-weight: 600;
@@ -210,10 +213,10 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
     font-size: 18px;
 }
 h1, h2, h3, h4, h5, h6 {
-    color: #4b505e;
+    color: #fff;
 }
 .new_footer_top .f_widget.about-widget .f_list li a {
-    color: #6a7695;
+    color: #fff;
 }
 
 

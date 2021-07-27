@@ -106,7 +106,7 @@
 </svg> 
      </div>
   
-
+<Footer></Footer>
 </div>
  
 
@@ -114,8 +114,9 @@
 
 <script>
 import HomeNavigation from '../components/Navigation.vue'
+import Footer from "../components/Footer.vue"
     export default {
-  components: { HomeNavigation },
+  components: { HomeNavigation, Footer},
       
     }
 </script>
