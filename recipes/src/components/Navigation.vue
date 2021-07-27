@@ -38,5 +38,6 @@
 nav{
   background-color: #6F495B !important;
   color: white !important;
+  z-index: 10;
 }
 </style>

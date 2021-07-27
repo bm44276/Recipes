@@ -2,6 +2,9 @@
     <div class="contactUs">
         <HomeNavigation></HomeNavigation>
         <br><br>
+        <div class="backgroundVideo">
+            <video src="../assets/salt.mp4" autoplay muted loop></video>
+        </div>
         <div id="wrap">
             <h1>Send a Message!</h1>
             <br><br><br>
@@ -11,8 +14,14 @@
                     <label for="email">Your Message:</label>
                     <textarea name="message" id="message" value="Your Message"></textarea>
                     <p>Best,</p>
-                    <label for="name">Name:</label>
-                    <input type="text" name="name" value="Name" id="email">
+                    <div class="inputDesign"> 
+                        <input type="text" name="name" id="email">
+                       <div class="underline">
+
+                       </div>
+                        <label for="name">Name:</label>
+                    </div>
+                    
 
                     <input type="submit" name="submit" value="Send">
                 </form>
@@ -31,6 +40,19 @@ import HomeNavigation from "../components/Navigation.vue"
 </script>
 
 <style>
+.contactUs{
+    width: 100%;
+}
+        .backgroundVideo video{
+            object-fit: cover;
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            opacity: 0.3;
+        }
 
      .contactUs, .contactUs.div, .contactUs.h1, .contactUs.h2, .contactUs form,
       .contactUs.fieldset, .contactUs input, .contactUs textarea, .contactUs.p{
@@ -42,6 +64,7 @@ import HomeNavigation from "../components/Navigation.vue"
 
      .contactUs{
           font-family: tahoma;
+          z-index: 2;
      }
      .contactUs p{
             font-size: 24px;
@@ -50,21 +73,26 @@ import HomeNavigation from "../components/Navigation.vue"
          width: 540px;
          margin: 20px auto;
          height: 1000px;
+         z-index: 2;
      }
     .contactUs h1{
          margin-bottom: 15px;
          text-align: center;
          font-size: 45px;
          font-family: tahoma;
-         color: white;
+         color: rgb(245, 245, 245);
          font-weight: bold;
-         letter-spacing: 2px;
+         letter-spacing: 3px;
+         word-spacing: 2px;
          animation: animate 2s linear;
+         z-index: 2;
+         position: relative;
+         text-shadow: 5px 12px 4px rgb(0, 0, 0);
      }
 
    @keyframes animate {
        0%{
-           width: 75%;
+           width: 82%;
        }
        70%, 90%{
            width: 100%;
@@ -121,15 +149,14 @@ import HomeNavigation from "../components/Navigation.vue"
   }
    .form-wrap:hover form{
       height: 530px;
-      box-shadow: 9px 9px 7px #6f6e75;
+      box-shadow: 8px -7px 27px black;
   }
   .form-wrap label{
       margin: 11px 20px 0 0;
       font-size: 15px;
       color: gray;
-      text-transform: uppercase;
   }
- .form-wrap input[type=text], textarea{
+ .form-wrap textarea{
       font: 14px normal uppercase, arial, serif;
       color: black;
       background: rgb(255, 255, 255);
@@ -152,9 +179,6 @@ import HomeNavigation from "../components/Navigation.vue"
     color: white;
     margin-bottom: 10px;
 }
- .contactUs textarea:focus, input[type=text]:focus{
-      background: white;
-  }
 
   .form-wrap input[type=submit]{
     position: relative;
@@ -179,5 +203,51 @@ import HomeNavigation from "../components/Navigation.vue"
   }
  .contactUs input[type=submit]:hover{
     color: white;
+  }
+  .inputDesign{
+        position: relative;
+        width: 100%;
+        height: 40px;
+        margin-bottom: 20px;
+  }
+  .inputDesign input{
+      height: 100%;
+      width: 100%;
+      border: none;
+      font-size: 17px;
+      border-bottom: 2px solid silver;
+      background: none;
+  }
+  .inputDesign input:focus ~ label{
+      transform: translateY(-20px);
+      font-size: 16px;
+      color: white;
+  }
+  .inputDesign label{
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      color: grey;
+      pointer-events: none;
+      transition: all 0.3s ease;
+  }
+  .inputDesign .underline{
+      position: absolute;
+      bottom: 0px;
+      height: 2px;
+      width: 100%;
+      background: rgb(29, 30, 44);
+  }
+  .inputDesign .underline::before{
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: white;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+  }
+  .inputDesign input:focus ~ .underline::before{
+        transform: scaleX(1);
   }
 </style>
