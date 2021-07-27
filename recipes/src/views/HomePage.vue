@@ -57,12 +57,12 @@ export default {
         },
            mounted: function () {
             
-           this.$http.get("https://api.spoonacular.com/recipes/complexSearch?apiKey=e0c6235e9e9448a9acc247fb4264294b&query=&number=20").then(response => {
+           this.$http.get("https://api.spoonacular.com/recipes/complexSearch?apiKey=43f565ab010744c48b2fdd02bf4d4988&query=&number=20").then(response => {
                 this.recipes = response.data;
                 console.log(response.data);
             });
               
-            this.$http.get("https://api.spoonacular.com/recipes/random?apiKey=e0c6235e9e9448a9acc247fb4264294b&&number=10").then(response => {
+            this.$http.get("https://api.spoonacular.com/recipes/random?apiKey=43f565ab010744c48b2fdd02bf4d4988&&number=10").then(response => {
                 this.recipes = response.data;
                 console.log(response.data);
             });

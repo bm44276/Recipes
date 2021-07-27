@@ -26,21 +26,21 @@
       </ul>
       
     </div>-->
-
-    <div class="container">
+ <h1 class="text-white my-3">Details</h1>
+    <div class="container my-3 bg" >
         
-
-        <div class="d-flex justify-content-around">
+     
+        <div class="d-flex justify-content-center">
             <div>
 
-               <img v-bind:src="recipe.image" alt="" height="400px"  width="400px" class="img-fluid">
+               <img v-bind:src="recipe.image" alt="" height="400px"  width="400px" class="img-fluid m-5">
             </div>
           
             
             <div>
-                <h2 class="text"> {{recipe.title}}</h2>
-                <p class="text">Made for {{recipe.readyInMinutes}} people</p>
-                <p class="text">Estimated time {{recipe.readyInMinutes}} minutes</p>
+                <h2 class="text-black my-5" style="font-weight:600; font-style:underline">♦ {{recipe.title}}</h2>
+                <p class="text-black">♣ Made for {{recipe.readyInMinutes}} people</p>
+                <p class="text-black">♣ Estimated time {{recipe.readyInMinutes}} minutes</p>
             </div>
         </div>
         
@@ -58,7 +58,7 @@
             </div>
             
             <div  class="text">
-                <h3>Ingrediants</h3>
+                <h3>Ingredients</h3>
 
                   <ul>
                   <template v-for="item in recipe.analyzedInstructions[0].steps">
@@ -114,7 +114,7 @@ export default {
     console.log(recipeId);
     
           
-    this.$http.get("https://api.spoonacular.com/recipes/"+recipeId+"/information?apiKey=e0c6235e9e9448a9acc247fb4264294b&includeNutrition=false").then(response => {
+    this.$http.get("https://api.spoonacular.com/recipes/"+recipeId+"/information?apiKey=43f565ab010744c48b2fdd02bf4d4988&includeNutrition=false").then(response => {
                 this.recipe = response.data;
                 console.log(response.data);
       });   
@@ -134,7 +134,7 @@ ul li{
 }
 
 .text{
-    color: white;
+    color: black;
 }
 
 .rowSpace{
@@ -143,6 +143,20 @@ ul li{
 
 .spaceDiv{
     margin-top: 80px;
+}
+.img-fluid{
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.bg{
+
+background: #000000;
+background: radial-gradient(ellipse farthest-side at top left, #000000 0%, #cccccc 80%);
+background: -webkit-radial-gradient(ellipse farthest-side at top left, #000000 0%, #cccccc 80%);
+background: -moz-radial-gradient(ellipse farthest-side at top left, #000000 0%, #cccccc 80%);
+border-radius: 30px;
 }
 
 </style>

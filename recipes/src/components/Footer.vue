@@ -157,7 +157,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
     border-radius: 50%;
     font-size: 14px;
     line-height: 45px;
-    color: #858da8;
+    color: #000;
     display: inline-block;
     background: #ebeef5;
     text-align: center;
