@@ -34,70 +34,76 @@
 
         <div class="spaceDiv"></div>
       
-        <div class="justify-content-around">
-          <div class="row justify-content-around">
-             <div class="col-md-4 mb-4"> 
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                      <div class="flip-card-front">
-                        <img src="../assets/besmir.jpg" alt="Avatar" style="width:300px;height:300px;">
-                      </div>
-                      <div class="flip-card-back">
-                        <h2>Besmir Miftari</h2>
-                        <p>Back end developer</p>
-                      </div>
-                    </div>
-                  </div>
+      <!-- ======= Chefs Section ======= -->
+    <section id="chefs" class="chefs">
+      <div class="container" >
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="member" >
+              <img src="../assets/chefe.jpg" class="img-fluid fotoja" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Marigona kadriu</h4>
+                  <span>Master Chef</span>
+                </div>
+                <div class="social">
+                  <a href=""><i class="fab fa-instagram"></i></a>
+                  <a href=""><i class="fab fa-twitter"></i></a>
+                  <a href=""><i class="fab fa-facebook"></i></a>
+                  <a href=""><i class="fab fa-linkedin"></i></a>
+                </div>
+              </div>
             </div>
-            <div class="col-md-4 mb-4"> 
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                      <div class="flip-card-front">
-                        <img src="../assets/marigona.jpg" alt="Avatar" style="width:300px;height:300px;">
-                      </div>
-                      <div class="flip-card-back">
-                        <h2>Marigona Kadriu</h2>
-                        <p>Front end developer</p>
-                      </div>
-                    </div>
-                  </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="member" >
+              <img src="../assets/rat.png" class="img-fluid fotoja" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Besmir Miftari</h4>
+                  <span>Patissier</span>
+                </div>
+                <div class="social">
+                   <a href=""><i class="fab fa-instagram"></i></a>
+                  <a href=""><i class="fab fa-twitter"></i></a>
+                  <a href=""><i class="fab fa-facebook"></i></a>
+                  <a href=""><i class="fab fa-linkedin"></i></a>
+                </div>
+              </div>
             </div>
-            <div class="col-md-4 mb-4"> 
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                      <div class="flip-card-front">
-                        <img src="../assets/joni.jpg" alt="Avatar" style="width:300px;height:300px;">
-                      </div>
-                      <div class="flip-card-back">
-                        <h2>Jon Morina</h2>
-                        <p>Full stack developer</p>
-                      </div>
-                    </div>
-                  </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="member" >
+              <img src="../assets/chef.png" class="img-fluid fotoja" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Jon Morina</h4>
+                  <span>Cook</span>
+                </div>
+                <div class="social">
+               <a href=""><i class="fab fa-instagram"></i></a>
+                  <a href=""><i class="fab fa-twitter"></i></a>
+                  <a href=""><i class="fab fa-facebook"></i></a>
+                  <a href=""><i class="fab fa-linkedin"></i></a>
+                </div>
+              </div>
             </div>
-          </div>  
-           
-      
+          </div>
+
         </div>
+
+      </div>
+    </section><!-- End Chefs Section -->
         <div>
 
         </div>
 
         <div class="spaceDiv"></div>
 
-        <div>
-            <p class="aboutUsHeaders text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, alias?
-                 Nulla non impedit voluptatibus labore nam sequi possimus mollitia magni 
-                 temporibus sunt odio quidem consectetur, recusandae quae minus hic blanditiis ex dolorem
-                  aspernatur! Deserunt dicta dolorem, impedit id vitae quod harum a enim recusandae laborum,
-                   sint modi perspiciatis eligendi ad minus facilis vel culpa ullam repellat? Laudantium
-                    illo ipsum aliquid eum blanditiis dolor iusto nisi itaque atque dicta accusantium, 
-                    ducimus ipsam fuga cupiditate cum vero velit libero aperiam aut a accusamus nulla totam
-                     officiis esse.
-            </p>
-
-            
-        </div>
         
     </div>
       <Footer></Footer>
@@ -144,51 +150,96 @@ import Footer from "../components/Footer.vue"
 
 
 
+.chefs .member {
+  text-align: center;
+  margin-bottom: 20px;
+  background: #343a40;
+  position: relative;
+  overflow: hidden;
+}
 
-  .flip-card {
-    background-color: transparent;
-    width: 300px;
-    height: 300px;
-    border: 1px solid #f1f1f1;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
-  }
-  
-  /* This container is needed to position the front and back side */
-  .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-  }
-  
-  /* Do an horizontal flip when you move the mouse over the flip box container */
-  .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-  
-  /* Position the front and back side */
-  .flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
-    backface-visibility: hidden;
-  }
-  
-  /* Style the front side (fallback if image is missing) */
-  .flip-card-front {
-    background-color: #bbb;
-    color: black;
-  }
-  
-  /* Style the back side */
-  .flip-card-back {
-    background-color: #414141;
-    color: white;
-    transform: rotateY(180deg);
-  }
+.chefs .member .member-info {
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: 0.2s;
+}
+
+.chefs .member .member-info-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  transition: bottom 0.4s;
+}
+
+.chefs .member .member-info-content h4 {
+  font-weight: 700;
+  margin-bottom: 2px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.chefs .member .member-info-content span {
+  font-style: italic;
+  display: block;
+  font-size: 13px;
+  color: #fff;
+}
+
+.chefs .member .social {
+  position: absolute;
+  left: 0;
+  bottom: -38px;
+  right: 0;
+  height: 48px;
+  transition: bottom ease-in-out 0.4s;
+  text-align: center;
+}
+
+.chefs .member .social a {
+  transition: color 0.3s;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.chefs .member .social a:hover {
+  color: #cda45e;
+}
+
+.chefs .member .social i {
+  font-size: 18px;
+  margin: 0 2px;
+}
+
+.chefs .member:hover .member-info {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 20%, rgba(0, 212, 255, 0) 100%);
+  opacity: 1;
+  transition: 0.4s;
+}
+
+.chefs .member:hover .member-info-content {
+  bottom: 60px;
+  transition: bottom 0.4s;
+}
+
+.chefs .member:hover .social {
+  bottom: 0;
+  transition: bottom ease-in-out 0.4s;
+}
+
+.fotoja{
+
+    float: left;
+    width:  350px;
+    height: 500px;
+    object-fit: cover;
+
+}
 
   .spaceDiv{
       margin-top: 100px;

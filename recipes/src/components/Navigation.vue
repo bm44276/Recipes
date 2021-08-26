@@ -59,16 +59,29 @@ nav{
   z-index: 10;
 }
 
+.navbar-nav{
+  display: flex;
+  justify-content: space-evenly;
+
+}
+@media only screen and (min-width: 768px) {
+  .navbar-nav{
+    width: 70%
+  }
+}
+
 @import url('https://fonts.googleapis.com/css2?family=STIX+Two+Math');
 
 .nav-link{
   font-family: 'STIX Two Math', serif;
-  font-size:18px
+  font-size:18px;
 }
+.fa {font-family: fontawesome !important;} 
 .nav-link:hover{
   background-color:#8d6f7dcb;
   padding: 5px 15px;
   border-radius: 20px;
+   transition: all 0.5s ease
 }
 @import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
 .navbar-brand{

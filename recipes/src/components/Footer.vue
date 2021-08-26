@@ -46,11 +46,14 @@
                         <div class="col-lg-3 col-md-6">
                             <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
                                 <h3 class="f-title f_600 t_color f_size_18">Team Solutions</h3>
-                                <div class="f_social_icon">
-                                    <a href="#" class="fab fa-facebook"></a>
+                                <div class="f_social_icon text-white">
+                                    <a href="#" class="fab fa-youtube"></a>
                                     <a href="#" class="fab fa-twitter "></a>
                                     <a href="#" class="fab fa-linkedin "></a>
-                                    <a href="#" class="fab fa-pinterest "></a>
+                                    <a href="#" class="fab fa-pinterest "></a> <br>
+                                    <a href="#" class="fab fa-instagram "></a>
+                                    <a href="#" class="fab fa-facebook "></a>
+                                    <a href="#" class="fab fa-snapchat "></a>
                                 </div>
                             </div>
                         </div>
@@ -126,7 +129,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
     text-decoration: none;
     outline: none;
 }
-
+.fa {font-family: fontawesome !important;} 
 
 
 .new_footer_top .f_widget.about-widget .f_list li a:hover {
@@ -151,7 +154,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
     width: 44px;
     height: 44px;
     line-height: 43px;
-    color: black;
+    color: #fff;
     border: 1px solid #e2e2eb;
     font-size: 24px;
 }
@@ -161,7 +164,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
     border-radius: 50%;
     font-size: 14px;
     line-height: 45px;
-    color: #000;
+    color: #fff;
     display: inline-block;
 
     text-align: center;
@@ -223,9 +226,9 @@ button:hover::before{
 }
 
 .new_footer_top .f_social_icon a:hover {
-    background: #6f495b;
-    border-color: #6f495b;
-  color:white;
+    background: #fff;
+
+  color:#6f495b;;
 }
 .new_footer_top .f_social_icon a + a {
     margin-left: 4px;

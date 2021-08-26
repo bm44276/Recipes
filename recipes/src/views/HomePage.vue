@@ -33,12 +33,7 @@
            
         </ul>-->
 
-        <div class="shadow py-3">
-            <video height="500" loop="true" autoplay="autoplay"  id="vid" muted style="text-align: center; border-radius:20px">
-            <source type="video/mp4" src="../assets/AppleAndPizzaAnimation.mp4">
-   
-            </video>
-        </div>
+  
 
         <div class="container-fluid mt-5 mb-5">
             <h1 class="text-white" style="letter-spacing:0.2em; font-family:verdana; font-size:35px">Our Recipes</h1>
@@ -63,7 +58,6 @@
 
         <div class="section-title">
           <h2 class="text-white" style="font-size:35px; font-family: verdana">Why Us</h2>
-          <p style="font-family: verdana">Why Choose Our Recipes</p>
         </div>
 
         <div class="row">
@@ -93,6 +87,12 @@
           </div>
 
         </div>
+              <div class="shadow py-3">
+            <video height="500" loop="true" autoplay="autoplay"  id="vid" muted style="text-align: center; border-radius:20px">
+            <source type="video/mp4" src="../assets/AppleAndPizzaAnimation.mp4">
+   
+            </video>
+        </div>
 
       </div>
     </section>
@@ -117,12 +117,12 @@ export default {
         },
            mounted: function () {
             
-           this.$http.get("https://api.spoonacular.com/recipes/complexSearch?apiKey=43f565ab010744c48b2fdd02bf4d4988&query=&number=20").then(response => {
+           this.$http.get("https://api.spoonacular.com/recipes/complexSearch?apiKey=a0d467d509404f728967a69ded5b609b&query=&number=20").then(response => {
                 this.recipes = response.data;
                 console.log(response.data);
             });
               
-            this.$http.get("https://api.spoonacular.com/recipes/random?apiKey=43f565ab010744c48b2fdd02bf4d4988&&number=12").then(response => {
+            this.$http.get("https://api.spoonacular.com/recipes/random?apiKey=a0d467d509404f728967a69ded5b609b&&number=12").then(response => {
                 this.recipes = response.data;
                 console.log(response.data);
             });
@@ -135,6 +135,29 @@ export default {
 
 <style scoped>
 body{background-color:#000; overflow:hidden;}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111111;
+}
 
 .scroll-down {
 	position: absolute;

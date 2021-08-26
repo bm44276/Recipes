@@ -1,32 +1,9 @@
 <template>
-  <div>
+  <div class="deetbg">
      <HomeNavigation></HomeNavigation>
 
-   <!--<div class="col">
-      <div><h1>{{recipe.title}}</h1></div>
-      <div>
-          <img v-bind:src="recipe.image" alt="">
-      </div>
-      <p>ready for {{recipe.readyInMinutes}} minutes</p>
-      <p>  {{recipe.instructions}}</p>
-      <p>Steps to be taken</p>
-      <ul v-for="item in recipe.analyzedInstructions[0].steps" :key="item.id">
-        <li>{{item.step}}</li>
-          Ingredients
-          <ul v-for="ingredient in item.ingredients" :key="ingredient.id">
-            <li>{{ingredient.name}}</li>
-          </ul>
 
-          <br>
-
-           Equipment
-          <ul v-for="ingredient in item.equipment" :key="ingredient.id">
-            <li>{{ingredient.name}}</li>
-          </ul>
-      </ul>
-      
-    </div>-->
- <h1 class="text-white my-3">Details</h1>
+ <h1 class="text-white my-3" style="letter-spacing: 0.2em;   font-family: Georgia, serif;">Details</h1>
     <div class="container my-3 bg" >
         
      
@@ -37,22 +14,21 @@
           
             
             <div>
-                <h2 class="text-black my-5" style="font-weight:600; font-style:underline">♦ {{recipe.title}}</h2>
-                <p class="text-black para">♣ Made for {{recipe.readyInMinutes}} people</p>
-                <p class="text-black para">♣ Estimated time {{recipe.readyInMinutes}} minutes</p>
+                <h2 class="text-white my-5" style="font-weight:500; font-style:underline;font-family: Georgia, serif;">♦ {{recipe.title}}</h2>
+                <p class="text-white para">♣ Made for {{recipe.readyInMinutes}} people</p>
+                <p class="text-white para">♣ Estimated time {{recipe.readyInMinutes}} minutes</p>
             </div>
         </div>
         
         <div class="spaceDiv"></div>
-        <h2 class="" style="font-family: verdana; letter-spacing: 0.2em">Instructions</h2>
         <div class="container d-flex">
-            <p class="text text1 col-md-8 mx-3 p-3" style="text-align: center; "> {{recipe.instructions}}</p>
+            
 
-            <div class="text text4 col-md-3">
-                <h3>Equipment</h3>
-                 <ul>
+            <div class="text text4 col-md-12 equipments">
+                <h3 class="my-3" style="color:white;   font-family: Georgia, serif; letter-spacing: 0.2em">Equipments</h3>
+                 <ul  >
                   <template v-for="item in recipe.analyzedInstructions[0].steps">
-                    <li v-for="equipment in item.equipment" :key="equipment.id">
+                    <li class="equipment" v-for="equipment in item.equipment" :key="equipment.id">
                       {{equipment.name}}
                     </li>
                   </template>
@@ -61,19 +37,19 @@
         </div>
 
         <div class="d-flex justify-content-center">
-            <div class="text text2 col-md-7 mx-4">
+            <div class="text text2 col-md-7 mx-4" style="border: 1px solid #fffafa">
                <h3 class=" p-3">Steps</h3>
                <ul v-for="item in recipe.analyzedInstructions[0].steps" :key="item.id">
                    <li>{{item.step}}</li>
                </ul>
             </div>
             
-            <div  class="text text3 col-md-3">
+            <div  class="text text3 col-md-3" style="border: 1px solid #fffafa; color: #f1f1f1; ">
                 <h3 class="p-3">Ingredients</h3>
 
                   <ul>
                   <template v-for="item in recipe.analyzedInstructions[0].steps">
-                    <li v-for="ingredient in item.ingredients" :key="ingredient.id">
+                    <li  style="border: 2px solid #f1f1f1; margin: 2px 0" v-for="ingredient in item.ingredients" :key="ingredient.id">
                       {{ingredient.name}}
                     </li>
                   </template>
@@ -130,8 +106,9 @@ export default {
 
 <style scoped>
   .para{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family:  Georgia, serif;;
     font-weight: 600;
+    color: #fffafa
 
   }
 ul li{
@@ -142,11 +119,8 @@ ul li{
 }
 
 .text{
-    color: black;
-   background: rgba( 255, 255, 255, 0.25 );
-box-shadow: 0 8px 32px 0 rgba(20, 20, 26, 0.37);
-backdrop-filter: blur( 4px );
--webkit-backdrop-filter: blur( 4px );
+    color: white;
+
 border-radius: 10px;
 border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
@@ -165,11 +139,11 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 .bg{
-
-background: #000000;
-background: radial-gradient(ellipse farthest-side at top left, #000000 0%, #cccccc 80%);
-background: -webkit-radial-gradient(ellipse farthest-side at top left, #000000 0%, #cccccc 80%);
-background: -moz-radial-gradient(ellipse farthest-side at top left, #000000 0%, #cccccc 80%);
+ backdrop-filter: blur(0px) saturate(200%);
+    -webkit-backdrop-filter: blur(0px) saturate(200%);
+    background-color: rgba(0, 0, 0, 0.66);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
 border-radius: 30px;
 }
 .detImg{
@@ -185,6 +159,32 @@ border-radius: 30px;
 		opacity: 1;
 		transform: translate3d(0, 0, 0);
 	}
+}
+
+.equipments{
+ backdrop-filter: blur(5px) saturate(200%);
+    -webkit-backdrop-filter: blur(5px) saturate(200%);
+    background-color: rgba(21, 21, 21, 0.336);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+
+}
+.equipment{
+  display:inline;
+  margin: 0 10px;
+border: 1px solid #fffafa;
+background-color: rgba(163, 163, 163, 0.336);
+  color: #fffafa;
+  border-radius:25px;
+  padding: 5px 10px
+}
+.equipment:hover{
+  background-color: rgba(0, 0, 0, 0.664);
+  transition: ease-in;
+}
+.deetbg{
+  background-image: url(../assets/recipe.jpg);
+  background-size: cover;
 }
 
 </style>
