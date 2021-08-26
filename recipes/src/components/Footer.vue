@@ -79,6 +79,8 @@ body {
 
 .new_footer_area {
     background: #6f495b;
+    z-index: 1;
+    position: relative;
 }
 
 
@@ -180,18 +182,44 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
     content: "\e731";
 }
 
-.btn_get_two {
-    -webkit-box-shadow: none;
-    box-shadow: none;
+button{
+    width: 80px;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 12px 0;
     background: #fff;
-    border-color: #6f495b;
-    color: #414141;
+    border: none;
+    border-radius: 4px;
+    outline:none;
+    position: relative;
+    margin-top: 30px;
+    z-index: 1;
+}
+button:hover{
+  color: white !important;
 }
 
-.btn_get_two:hover {
-    background: transparent;
-    color: #fff;
-    background-color: #141414
+button::before{
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  background-color: #4d3742;
+  color: white;
+}
+button:hover::before{
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: -1;
+  color: white;
 }
 
 .new_footer_top .f_social_icon a:hover {

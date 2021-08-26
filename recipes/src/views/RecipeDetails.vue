@@ -31,8 +31,7 @@
         
      
         <div class="d-flex justify-content-center">
-            <div>
-
+            <div class="detImg">
                <img v-bind:src="recipe.image" alt="" height="400px"  width="400px" class="img-fluid m-5">
             </div>
           
@@ -172,6 +171,20 @@ background: radial-gradient(ellipse farthest-side at top left, #000000 0%, #cccc
 background: -webkit-radial-gradient(ellipse farthest-side at top left, #000000 0%, #cccccc 80%);
 background: -moz-radial-gradient(ellipse farthest-side at top left, #000000 0%, #cccccc 80%);
 border-radius: 30px;
+}
+.detImg{
+	opacity: 0;
+	animation: fadeIn 1s ease-in both;
+}
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translate3d(0, -20%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
 }
 
 </style>

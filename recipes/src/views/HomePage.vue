@@ -4,10 +4,8 @@
     <div class="wrapper">
         <div class="row">
         <div class="col">
-                <h1>Lorem ipsum</h1>
-                <p>Lorem ipsum dolor sit amet dolor sit amet lorem ipsum
-                Lorem ipsum dolor sit amet dolor sit amet lorem ipsum
-                Lorem ipsum dolor sit amet dolor sit amet lorem ipsum0</p>
+                <h1>Welcome to Recipere!</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                 <button>Explore</button>
             </div>
             <div class="col">
@@ -101,27 +99,7 @@
         <Footer></Footer>
   </div>
 </template>
-<script>
-var slideIndex = 0;
-showSlides();
 
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
-</script>
 
 <script>
 import HomeNavigation from "../components/Navigation.vue"
@@ -218,32 +196,58 @@ body{background-color:#000; overflow:hidden;}
 }
 h1{
     color: #fff;
-    font-size:80px;
+    font-size:70px;
+    margin-bottom: 10px;
 }
 
 p{
 color: #fff;
-font-size: 12px;
+font-size: 13px;
+letter-spacing: 1px;
 line-height:15px;
-margin:10px 3em;
+margin:10px auto;
+width: 70%;
+text-align: left;
 }
 button{
-    width: 180px;
+    width: 200px;
+    height: 50px;
     color: #000;
-    font-size: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
     padding: 12px 0;
     background: #fff;
-    border: 0;
-    border-radius: 20px;
+    border: none;
+    border-radius: 4px;
     outline:none;
+    position: relative;
     margin-top: 30px;
-
+    z-index: 1;
 }
 button:hover{
-    background-color:#141414;
-    
-    color:#fff;
-    transition: ease 0.5s ;
+  color: white;
+}
+
+button::before{
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  background-color: #6F495B;
+  color: white;
+}
+button:hover::before{
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: -1;
+  color: white;
 }
 .card{
     width:200px;
@@ -256,7 +260,9 @@ button:hover{
     background-position: center;
     background-size:cover;
     transition: transform 0.5s;
+    cursor: pointer;
 }
+
 .card1{
     background-image: url(../../public/dish1.jpg);
 }
