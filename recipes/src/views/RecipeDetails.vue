@@ -6,6 +6,11 @@
  <h1 class="text-white my-3" style="letter-spacing: 0.2em;   font-family: Georgia, serif;">Details</h1>
     <div class="container my-3 bg" >
         
+        <audio autoplay style="display: none">
+        <source src="../assets/Knife-Sharpen.mp3" type="audio/ogg">
+   
+     
+      </audio>
      
         <div class="d-flex justify-content-center">
             <div class="detImg">
